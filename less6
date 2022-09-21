@@ -1,0 +1,137 @@
+# Task1:
+# import time
+# class TrafficLight:
+#     def __init__(self, color):
+#         self.__color = color
+#     def running(self):
+#         if self.color == "RED":
+#             while True:
+#                 print("RED")
+#                 time.sleep(7)
+#                 print("YELLOW")
+#                 time.sleep(2)
+#                 print("GREEN")
+#                 time.sleep(4)
+#         if self.color == "YELLOW":
+#             while True:
+#                 print("YELLOW")
+#                 time.sleep(2)
+#                 print("GREEN")
+#                 time.sleep(4)
+#                 print("RED")
+#                 time.sleep(7)
+#         if self.color == "GREEN":
+#             while True:
+#                 print("GREEN")
+#                 time.sleep(4)
+#                 print("RED")
+#                 time.sleep(7)
+#                 print("YELLOW")
+#                 time.sleep(2)
+#
+# TrafficLight1 = TrafficLight("GREEN")
+# TrafficLight1.running()
+
+# Task2:
+# class Road():
+#     def __init__(self, length, width):
+#         self._length = length
+#         self._width = width
+#     def calc(self):
+#         return f"The amount of asphalt required to pave your road is: {int(self._length) * int(self._width) * 25 * 5} kg"
+# Road1 = Road(45, 2)
+# print(Road1.calc())
+
+# Task3:
+# class Worker:
+# 
+#     def __init__(self, name, surname, pos, income):
+#         self.name = name
+#         self.surname = surname
+#         self.pos = pos
+#         self.income = income
+# 
+# class Position(Worker):
+#     def __init__(self, name, surname, pos, income):
+#         super().__init__(name, surname, pos, income)
+#     def get_full_name(self):
+#         print(f"The worker's full name is: {self.name} {self.surname}")
+#     def get_total_income(self):
+#         full = self.income['Wage'] + self.income['Bonus']
+#         print(f"The worker's full income is: {full}")
+# 
+# Position1 = Position("Ivan", "Ivanov", "Accountant",  {"Wage": 50000, "Bonus": 20000})
+# Position1.get_total_income()
+
+#Task4:
+# class Car:
+#     def __init__(self, name, speed, color, is_police):
+#         self.name = name
+#         self.speed = speed
+#         self.color = color
+#         self.is_police = is_police
+#     def Car_go(self):
+#         print(f"{self.name} starts")
+#     def Car_stop(self):
+#         print(f"{self.name} stops")
+#     def Car_turn(self):
+#         print(f"{self.name} turns right")
+#     def show_speed(self):
+#         print(f"{self.name}'s speed is {self.speed}")
+#
+# class TownCar(Car):
+#     def __init__(self, name, speed, color, is_police):
+#         super().__init__(name, speed, color, is_police)
+#     def show_speed(self):
+#         if self.speed > 60:
+#             print(f"{self.name}'s speed is above the speed limit")
+#         else:
+#             print(f"{self.name}'s speed is {self.speed}")
+# class SportCar(Car):
+#     def __init__(self, name, speed, color, is_police):
+#         super().__init__(name, speed, color, is_police)
+# class WorkCar(Car):
+#     def __init__(self, name, speed, color, is_police):
+#         super().__init__(name, speed, color, is_police)
+#     def show_speed(self):
+#         if self.speed > 40:
+#             print(f"{self.name}'s speed is above the speed limit")
+#         else:
+#             print(f"{self.name}'s speed is {self.speed}")
+# class PoliceCar(Car):
+#     def __init__(self, name, speed, color, is_police):
+#         super().__init__(name, speed, color, is_police)
+#
+# Car1 = Car("ss", 100, "red", True)
+# Car1.Car_turn()
+# Car2 = TownCar("mm", 200, "blue", False)
+# Car2.Car_stop()
+# Car3 = WorkCar("ff", 50, "white", False)
+# Car3.show_speed()
+
+
+#Task5:
+# class Stationery:
+#     def __init__(self, title):
+#         self.title = title
+#     def draw(self):
+#         print("Drawing launched:")
+# class Pen(Stationery):
+#     def __init__(self, title):
+#         super().__init__(title)
+#     def draw(self):
+#         print(f"Drawing with {self.title} Pen launched:")
+# class Pencil(Stationery):
+#     def __init__(self, title):
+#         super().__init__(title)
+#     def draw(self):
+#         print(f"Drawing with {self.title} Pencil launched:")
+# class Handle(Stationery):
+#     def __init__(self, title):
+#         super().__init__(title)
+#     def draw(self):
+#         print(f"Drawing with {self.title} Handle launched:")
+# Stationery1 = Stationery("A")
+# Stationery1.draw()
+# Pen1 = Pen("Red")
+# Pen1.draw()
